@@ -1,0 +1,2 @@
+build: cd frontend && npm install && npm run build
+web: uvicorn server:app --host 0.0.0.0 --port $PORT

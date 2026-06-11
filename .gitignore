@@ -1,9 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Databases
+*.sqlite3
+*.db
+decisions.db
+
+# CrewAI
 .crewai-data/
 .crewai-home/
-.ruff_cache/
-.venv/
-__pycache__/
+
+# Environment Variables
 .env
 .env.*
 !.env.example
+
+# IDEs and Tools
+.vscode/
+.idea/
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
 .streamlit/
+
+# OS
+.DS_Store
+Thumbs.db

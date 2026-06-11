@@ -542,6 +542,22 @@ dict at task-build time, not inferred from agent outputs.
 
 ---
 
+## Migration: Streamlit to Vite plus React plus TypeScript
+
+The system architecture has been split into a decoupled frontend and backend to support complex UI requirements and mobile rendering.
+
+- **Development:** Two servers run simultaneously. The React frontend runs on port `5173` (Vite dev server) and proxies API calls to the FastAPI backend running on port `8000`.
+- **Production:** A single-server setup. The FastAPI backend serves the compiled React build (`frontend/dist`) as static files on the root `/` route.
+
+**How to run locally:**
+1. In the root directory, install Python dependencies: `pip install -r requirements.txt`
+2. In the `frontend/` directory, install Node dependencies: `npm install`
+3. Open two terminals:
+   - Terminal 1 (Backend): `uvicorn server:app --reload`
+   - Terminal 2 (Frontend): `cd frontend && npm run dev`
+
+---
+
 *Fair Lending Guardian is a prototype built for the AI Safari capstone (Module 4:
 Agent Savannah). All AI output is advisory only. A named human loan officer owns every
 final lending decision.*

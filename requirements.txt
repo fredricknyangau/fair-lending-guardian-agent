@@ -1,7 +1,8 @@
 crewai[google-genai]==1.14.6
 litellm==1.88.0
 python-dotenv==1.2.2
-streamlit==1.58.0
+fastapi==0.110.0
+uvicorn>=0.31.1
 pydantic==2.12.5
 cohere==7.0.3
 plotly==6.8.0
