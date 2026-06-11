@@ -1,4 +1,4 @@
-import crewai_env
+from backend import crewai_env
 crewai_env.configure_crewai_environment()
 
 import os
@@ -10,11 +10,11 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 from crewai import Crew, Process
-from guard import proxy_block, kill_switch_check, dignity_filter, unusual_pattern_check
-from tasks import build_tasks
-from agents import scout_agent, guardian_agent, hunter_agent
-from mock_data import GRACE_APPLICATION, BODA_BODA_APPLICATION
-from database import init_db, log_decision, get_recent_decisions
+from backend.guard import proxy_block, kill_switch_check, dignity_filter, unusual_pattern_check
+from backend.tasks import build_tasks
+from backend.agents import scout_agent, guardian_agent, hunter_agent
+from backend.mock_data import GRACE_APPLICATION, BODA_BODA_APPLICATION
+from backend.database import init_db, log_decision, get_recent_decisions
 
 # Initialize the database
 init_db()

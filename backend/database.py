@@ -2,7 +2,8 @@ import sqlite3
 import os
 from datetime import datetime
 
-DB_PATH = "decisions.db"
+# Ensure the database is always stored in the project root, not the backend folder
+DB_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "decisions.db")
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)

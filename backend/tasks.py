@@ -1,6 +1,6 @@
 from crewai import Task
 
-from agents import guardian_agent, hunter_agent, scout_agent
+from backend.agents import guardian_agent, hunter_agent, scout_agent
 
 
 def build_tasks(application: dict) -> list:

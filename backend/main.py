@@ -1,9 +1,9 @@
 from crewai import Crew, Process
 
-from agents import guardian_agent, hunter_agent, scout_agent
-from guard import kill_switch_check, proxy_block
-from mock_data import GRACE_APPLICATION
-from tasks import build_tasks
+from backend.agents import guardian_agent, hunter_agent, scout_agent
+from backend.guard import kill_switch_check, proxy_block
+from backend.mock_data import GRACE_APPLICATION
+from backend.tasks import build_tasks
 
 print("\n" + "=" * 60)
 print("FAIR LENDING GUARDIAN — AGENT PRIDE PROTOTYPE")
